@@ -75,24 +75,28 @@ puzzles = [
     },
     {
         'answers': [
-            ['D', 'O', 'G', '', ''],
-            ['', '', '', '', ''],
-            ['', '', '', '', ''],
-            ['', '', '', '', ''],
-            ['', '', '', '', '']
+            ['', 'D', 'R', 'E', ''],
+            ['P', 'R', 'O', 'V', 'E'],
+            ['H', 'O', 'M', 'E', 'R'],
+            ['A', 'V', 'A', 'N', 'T'],
+            ['T', 'E', 'N', 'T', '']
         ],
         'across_clues': {
-            1: "The answer is dog",
-            2: "I haven't finished this puzzle yet",
-            3: "Stay tuned"
+            1: "Record producer that Eminem says people ''Forgot about''",
+            4: "To demonstrate through evidence or argument",
+            6: "Simpson who wrote the Odyssey?",
+            7: "_____-garde",
+            8: "A camper's home"
         },
         'down_clues': {
-            1: "First down clue",
-            4: "Second down clue",
-            5: "Third down clue"
+            1: "Operated a vehicle",
+            2: "The culture of Julius Caesar",
+            3: "Occurrence or happening",
+            4: "Highly attractive or hot, in slang",
+            5: "Suffix with 'exp' or 'al'"
         },
-        'blacked_out': [(1, 1), (3, 3)],
-        'numbered_cells': [(0, 0, 1), (0, 1, 2), (0, 2, 3)]
+        'blacked_out': [(0, 0), (0, 4), (4, 4)],
+        'numbered_cells': [(0, 1, 1), (0, 2, 2), (0, 3, 3), (1, 0, 4), (1, 4, 5), (2, 0, 6), (3, 0, 7), (4, 0, 8)]
     }
 ]
 
@@ -207,9 +211,13 @@ while running:
 
     if puzzle_completed:
         # Display congratulations message
-        congrats_message = "Congratulations! You completed all puzzles!"
-        text_surface = font.render(congrats_message, True, CONGRATULATIONS_COLOR)
-        screen.blit(text_surface, (WINDOW_WIDTH // 2 - text_surface.get_width() // 2, WINDOW_HEIGHT // 2))
+        congrats_message_line1 = "Congratulations! You completed all puzzles! Thanks for playing!"
+        congrats_message_line2 = "-IF"
+        text_surface_line1 = font.render(congrats_message_line1, True, CONGRATULATIONS_COLOR)
+        text_surface_line2 = font.render(congrats_message_line2, True, CONGRATULATIONS_COLOR)
+        screen.blit(text_surface_line1, (WINDOW_WIDTH // 2 - text_surface_line1.get_width() // 2, WINDOW_HEIGHT // 2))
+        screen.blit(text_surface_line2, ((WINDOW_WIDTH // 2 - text_surface_line2.get_width() // 2) + 70, WINDOW_HEIGHT // 2 + 40))
+
     else:
         # Draw grid
         draw_grid()
