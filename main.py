@@ -58,7 +58,7 @@ puzzles = [
         ],
         'across_clues': {
             1: "Container often made of plastic, cloth, or paper",
-            4: "University of Alabama, for short",
+            4: "University of Alabama, informally",
             5: "Ultimate; End",
             6: "Expression of concern",
             7: "Famous Californian 'Drive In' diner"
